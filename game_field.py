@@ -3,7 +3,7 @@ import random
 
 board = []
 
-
+# creating the initial board
 def build_board():
     for i in range(consts.ROW_NUM):
         row = []
