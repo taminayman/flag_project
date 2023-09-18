@@ -21,3 +21,5 @@ def put_soldier_in_place():
 draw_screen()
 put_soldier_in_place()
 pygame.display.flip()
+
+time.sleep(5)
