@@ -1,5 +1,6 @@
 import pygame
 import consts
+import time
 
 
 screen = pygame.display.set_mode(
@@ -42,10 +43,11 @@ flag_image = init_image(consts.IMG_FLAG, consts.FLAG_SIZE)
 mine_image = init_image(consts.IMG_MINE, consts.MINE_SIZE)
 soldier_image = init_image(consts.IMG_SOLDIER, consts.SOLDIER_SIZE)
 
+time.sleep(5)
 
 
 # import soldier
-# import time
+
 #
 #
 # screen = pygame.display.set_mode((consts.WINDOW_WIDTH, consts.WINDOW_HEIGHT))
