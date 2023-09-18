@@ -26,3 +26,13 @@ FLAG_SIZE = (4, 3)
 MINE_SHADOW = 4
 GRASS_SHADOW = 5
 FLAG_SHADOW = 6
+
+IMG_SOLDIER = 'soldier.png'
+IMG_GRASS = 'grass.png'
+IMG_FLAG = 'flag.png'
+IMG_MINE = 'mine.png'
+GREEN = (138, 201, 38)
+
+BACKGROUND_COLOR = GREEN
+
+SQUARE_LEN = 30
