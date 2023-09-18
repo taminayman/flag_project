@@ -20,13 +20,13 @@ def put_soldier_in_place():
 
 def create_flag(flag_img):
     flag = pygame.image.load(flag_img)
-    sized_soldier = pygame.transform.scale(flag, (
+    sized_flag = pygame.transform.scale(flag, (
         consts.FLAG_WIDTH * consts.SQUARE_LENGTH, consts.FLAG_HEIGHT * consts.SQUARE_LENGTH))
 
     flag_box = pygame.Surface(
             (consts.FLAG_WIDTH * consts.SQUARE_LENGTH, consts.FLAG_HEIGHT * consts.SQUARE_LENGTH), )
     flag_box.fill(consts.SCREEN_COLOR)
-    flag_box.blit(sized_soldier, (consts.WINDOW_WIDTH - consts.FLAG_WIDTH * consts.SQUARE_LENGTH, consts.WINDOW_HEIGHT - consts.FLAG_HEIGHT * consts.SQUARE_LENGTH))
+    flag_box.blit(sized_flag, (consts.WINDOW_WIDTH - consts.FLAG_WIDTH * consts.SQUARE_LENGTH, consts.WINDOW_HEIGHT - consts.FLAG_HEIGHT * consts.SQUARE_LENGTH))
     return flag_box
 
 
