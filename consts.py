@@ -1,2 +1,3 @@
 ROW_NUM = 25
 COL_NUM = 50
+NO_BOMB = "EMPTY"
