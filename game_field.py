@@ -1,20 +1,33 @@
 import consts
+import random
 
-game_field = []
-def create():
-    global game_field
-    bubbles_grid = [
-        create_field_row(row, row_start=0, row_length=consts.COL_NUM)
-        for row in
-        range(consts.BUBBLE_GRID_START_ROWS)]
+board = []
 
-    # Create an empty row for future bubbles
-    last_row = consts.BUBBLE_GRID_START_ROWS
-    bubbles_grid.append(create_empty_row(last_row))
+def build_board():
+    for i in range(consts.ROW_NUM):
+        row = []
+        for j in range(consts.COL_NUM):
+            row.append(consts.EMPTY)
+        board.append(row)
+
+    board[consts.ROW_NUM - 1][consts.COL_NUM - 1] = consts.FLAG
 
 
-def create_bubble_row(row_index, row_start, row_length):
-    return [Bubble.create(Bubble.calc_center_x(col, row_index, row_start),
-                          Bubble.calc_center_y(row_index),
-                          random.choice(consts.bubble_colors)) for col in
-            range(row_length)]
+def add_object(obj, num_of_objects):
+    for i in range(num_of_objects):
+        found_empty_pos = False
+        while not found_empty_pos:
+            x = random.randint(0, consts.COL_NUM - 1)
+            y = random.randint(0, consts.ROW_NUM - 1)
+            if board[y][x] == consts.EMPTY:
+                found_empty_pos = True
+                board[y][x] = obj
+
+
+def add_mines():
+    add_object(consts.MINE, consts.NUM_OF_MINES)
+
+
+def add_grass():
+    add_object(consts.GRASS, consts.NUM_OF_GRASS)
+
