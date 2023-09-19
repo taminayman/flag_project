@@ -13,8 +13,10 @@ GRASS_SHADOW = 5
 FLAG_SHADOW = 6
 
 GREEN = (138, 201, 38)
-
 BACKGROUND_COLOR = GREEN
+BLACK = (0, 0, 0)
+DARK_BACKGROUND_COLOR = BLACK
+LIGHT_GREEN = (118, 238, 0)
 
 SQUARE_LEN = 20
 
@@ -34,4 +36,4 @@ IMG_SOLDIER = 'soldier.png'
 IMG_GRASS = 'grass.png'
 IMG_FLAG = 'flag.png'
 IMG_MINE = 'mine.png'
-IMG_EXPLODE = 'explotion.png'
+IMG_EXPLODE = 'explosion.png'
