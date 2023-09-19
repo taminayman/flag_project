@@ -96,3 +96,19 @@ def draw_game(board, soldier, show_mines, explode):
         draw_explode(soldier)
     else:
         draw_soldier(soldier)
+
+
+dark_screen = pygame.display.set_mode((consts.WINDOW_WIDTH, consts.WINDOW_HEIGHT))
+
+
+def draw_dark_screen():
+    pygame.display.set_caption("The Flag")
+    dark_screen.fill(consts.BLACK)
+    for x in range(0, consts.WINDOW_WIDTH, consts.SQUARE_LEN):
+        for y in range(0, constsWINDOW_HEIGHT, consts.SQUARE_LEN):
+            rect = pygame.Rect(x, y, consts.SQUARE_LEN, consts.SQUARE_LEN)
+            pygame.draw.rect(SCREEN, consts.LIGHT_GREEN, rect, 1)
+    return dark_screen
+
+
+time.sleep(5)

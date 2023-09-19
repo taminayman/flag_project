@@ -12,9 +12,13 @@ GRASS_IMG = "grass.png"
 FLAG_IMG = "flag.png"
 MINE_IMG = "mine.png"
 EXPLODE_IMG = "explosion.png"
+DARK_SOLDIER_IMG = "soldier_nigth.png"
 
 GREEN = (0, 100, 0)
 BACKGROUND_COLOR = GREEN
+BLACK = (0, 0, 0)
+DARK_BACKGROUND_COLOR = BLACK
+LIGHT_GREEN = (118, 238, 0)
 
 NUM_OF_MINES = 10
 NUM_OF_GRASS = 5
@@ -35,6 +39,3 @@ FLAG_SIZE = (4, 3)
 FONT_NAME = 'Calibri'
 FONT_SIZE = 50
 FONT_COLOR = (0, 0, 0)
-
-
-
