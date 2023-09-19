@@ -1,5 +1,4 @@
-
-import consts
+import consts2
 import random
 
 board = []
@@ -53,16 +52,17 @@ def add_flag():
     board[y][x] = consts.FLAG
 
 
+def soldier_on_mine(x, y):
+    if board[y + 3][x] == consts.MINE or board[y+3][x] == consts.MINE_SHADOW:
+        return True
+    if board[y + 3][x+1] == consts.MINE or board[y+3][x+1] == consts.MINE_SHADOW:
+        return True
+    return False
 
-build_board()
-add_mines()
-add_grass()
-add_flag()
-def visual_matrix(matrix):
-    for row in matrix:
-        for cell in row:
-            print(cell, end=" ")
-        print()
 
-visual_matrix(board)
-
+def soldier_on_flag(x, y):
+    if board[y + 3][x] == consts.FLAG or board[y+3][x] == consts.FLAG_SHADOW:
+        return True
+    if board[y + 3][x+1] == consts.FLAG or board[y+3][x+1] == consts.FLAG_SHADOW:
+        return True
+    return False
